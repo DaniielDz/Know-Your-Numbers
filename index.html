@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOW YOUR NUMBERS</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="table-container"> 
+    <div class="cell"><h1>#</h1></div>
+    <div class="cell"><h1>Source</h1></div>
+    <div class="cell"><h1>Detailed Description</h1></div>
+    <div class="cell"><h1>DAYS</h1></div>
+    <div class="cell">
+      <h1>LOCAL FIAT</h1>
+      <select class="select" id="fiatSelector" onchange="updateFiat(this.value)" >
+        <option class="option" disabled selected>Choose</option>
+        <option class="option" value="ZAR">ZAR</option>
+        <option class="option" value="USD">USD</option>
+        <option class="option" value="AUD">AUD</option>
+        <option class="option" value="CAD">CAD</option>
+        <option class="option" value="EUR">EUR</option>
+        <option class="option" value="GBP">GBP</option>
+    </select>    
+    </div>
+    <div class="cell"><h1>USD</h1></div>
+    <div class="cell"><h1>SATS</h1></div>
+
+    
+
+    <div class="cell">1</div>
+    <div class="cell">MS</div>
+    <div class="cell">Monthly Salary</div>
+    <div class="cell input-cell"><input inputmode="numeric" type="number" name="days" value="28"></div>
+    <div class="cell input-cell"><input class="input" type="number" name="localFiat" value="50000" id="f6"></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">2</div>
+    <div class="cell">ASP</div>
+    <div class="cell">Annual Salary Package</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="365" id="d7"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">3</div>
+    <div class="cell">PH</div>
+    <div class="cell">Public Holidays</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="12" id="d8"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">4</div>
+    <div class="cell">WE</div>
+    <div class="cell">Weekends</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="104" id="d9"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">5</div>
+    <div class="cell">APL</div>
+    <div class="cell">Annual Paid Leave</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="21" id="d10"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">6</div>
+    <div class="cell">SL</div>
+    <div class="cell">Sick Leave</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="12" id="d11"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">7</div>
+    <div class="cell">UPD</div>
+    <div class="cell">Unproductive Days - from employers perspective</div>
+    <div class="cell"><span class="resultCD"></span></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">8</div>
+    <div class="cell">PWD</div>
+    <div class="cell">Productive Work Days - from employers perspective</div>
+    <div class="cell"><span class="resultCD"></span></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">9</div>
+    <div class="cell">DS-365</div>
+    <div class="cell">Salary Per Day (365)</div>
+    <div class="cell">1</div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">10</div>
+    <div class="cell">HS-365</div>
+    <div class="cell">Salary Per Hour - 8 Hour Work Day</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="8" id="d15"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">11</div>
+    <div class="cell">HS-365</div>
+    <div class="cell">Salary Per Hour - 12 Hour Work Day</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="12" id="d16"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">12</div>
+    <div class="cell">HS-365</div>
+    <div class="cell">Salary Per Hour - 16 Hour Work Day</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="16" id="d17"></div>
+    <div class="cell"><span class="result"></span></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+
+    <div class="cell">17</div>
+    <div class="cell">HS</div>
+    <div class="cell">Unskilled Labor - Minimum Wage</div>
+    <div class="cell">1</div>
+    <div class="cell input-cell"><input class="input" type="number" name="days" value="20" id="f22"></div>
+    <div class="cell"><span class="resultUSD"></span></div>
+    <div class="cell"><span class="resultSATS"></div>
+  </div>
+  
+   <script src="main.js"></script>
+</body>
+</html>
